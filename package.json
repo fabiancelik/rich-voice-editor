@@ -1,0 +1,23 @@
+{
+  "name": "quill-rich-voice-editor",
+  "version": "0.0.2",
+  "main": "dist/richVoiceEditor.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabiancelik/rich-voice-editor.git"
+  },
+  "author": "Fabian Celik (mail@fabiancelik.com)",
+  "license": "MIT",
+  "dependencies": {
+    "quill": "^1.3.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.10.0"
+  }
+}
