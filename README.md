@@ -3,6 +3,8 @@ Rich Voice Editor: Quill Rich Text Editor Enhancements to support SSML
 
 With this module you can enhance the Quill Rich Text Editor https://quilljs.com/ to support SSML tags.
 
+![rich-voice-editor-screenshot](docs/rich-voice-editor-screen.png?raw=true)
+
 The following SSML / AWS Polly tags are currently supported:
 
 *   speak - 
