@@ -13,6 +13,8 @@ There are also functions to parse formatted text to SSML and also a basic valida
 
 Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
+Try on jsfiddle: https://jsfiddle.net/fabiancelik/opa6cbj4/4/
+
 ## Installation
 
 Use the CDN link https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.1.0/dist/richVoiceEditor.min.js

@@ -10,6 +10,8 @@ layout: default
 
 ## HTML/JS for Live Demo
 
+{% include jsfiddle.html %}
+
 ```html
 <html lang="en">
     <head>
@@ -67,5 +69,4 @@ layout: default
         </script>
     </body>
 </html>
-}
 ```
