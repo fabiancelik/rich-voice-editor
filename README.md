@@ -5,8 +5,9 @@ With this module you can enhance the Quill Rich Text Editor https://quilljs.com/
 
 The following SSML / AWS Polly tags are currently supported:
 
-*   <speak>
-*   
+*   speak - 
+*   break - add a break / pause with 3 different durations
+*   ...
 
 There are also functions to parse formatted text to SSML and also a basic validation.
 
@@ -30,15 +31,20 @@ npm install quill-rich-voice-editor
 <script src="./node_modules/quill-rich-voice-editor/dist/richVoiceEditor.min.js"></script>
 ```
 
+URL to npm package: https://www.npmjs.com/package/quill-rich-voice-editor
+
+
 ## Usage
 
 1. Please check the official Quill documentation for the basics first: https://quilljs.com/docs/quickstart/
 
-2. Include the richVoiceEditor.min.js via CDN or NPM via script-tag.
+2. Include the richVoiceEditor.min.js via CDN or NPM in a script-tag.
 
 3. Add containters and handlers for every tag/function you want to use.
 
-4. Set 'rich-voice-editor' in modules to true
+3. Register the module to the Quill Editor.
+
+4. Set 'rich-voice-editor' in modules to true.
 
 ```html
 <!DOCTYPE html>
@@ -109,7 +115,8 @@ npm install quill-rich-voice-editor
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-To build the production build after changes in /src/index.js please use the following commands:
+
+To create the production build after changes in /src/index.js please use the following commands:
 
 ```shell
 npm i 

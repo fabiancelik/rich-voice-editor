@@ -44,7 +44,7 @@ end
 *   This is an unordered list following a header.
 
 ##### Header 5
- {% include footer.html %}
+ {% include example.html %}
 
 ###### Header 6
 
