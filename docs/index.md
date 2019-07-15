@@ -10,7 +10,11 @@ layout: default
 
 ## HTML/JS for Live Demo
 
+### HTML/JS Fiddle
+
 {% include jsfiddle.html %}
+
+### Sample single HTML file
 
 ```html
 <html lang="en">
