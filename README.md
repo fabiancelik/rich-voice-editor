@@ -1,4 +1,5 @@
-# rich-voice-editor <img src="docs/rich_voice_editor.png?raw=true" width="100">
+<img src="docs/rich_voice_editor.png?raw=true" align="right" width="100" height="100">
+# rich-voice-editor
 
 Rich Voice Editor: Quill Rich Text Editor Enhancements to support [SSML](https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html) 
 
