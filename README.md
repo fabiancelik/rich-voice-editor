@@ -13,7 +13,7 @@ The current functionality is optimized for [AWS Polly](https://aws.amazon.com/po
 
 Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
-Try on jsfiddle: https://jsfiddle.net/fabiancelik/opa6cbj4/4/
+Try on jsfiddle: https://jsfiddle.net/fabiancelik/opa6cbj4/5/
 
 ## Installation
 
