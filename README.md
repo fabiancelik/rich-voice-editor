@@ -15,6 +15,15 @@ Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
 Try on jsfiddle: https://jsfiddle.net/fabiancelik/opa6cbj4/5/
 
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="fyzlmn">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+<a name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php">Share</a>
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+<script type="in/share" data-counter="right"></script>
+
 ## Installation
 
 Use the CDN link https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.2.0/dist/richVoiceEditor.min.js
