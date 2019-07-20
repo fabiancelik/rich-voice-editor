@@ -5,7 +5,7 @@ With this module you can enhance the Quill Rich Text Editor https://quilljs.com/
 
 ![rich-voice-editor-screenshot](docs/rich-voice-editor-screen.png?raw=true)
 
-The following SSML tags / functions are supported: https://github.com/fabiancelik/rich-voice-editor/wiki/SSML-Tags-and-Functions
+The following SSML tags / functions are supported: [SSML Tags and Functions](https://github.com/fabiancelik/rich-voice-editor/wiki/SSML-Tags-and-Functions)
 
 Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
@@ -120,6 +120,8 @@ To create the production build after changes in /src/index.js please use the fol
 npm i 
 npm run-script build
 ```
+
+Please see the Wiki to learn more [how to add more SSML Tags](https://github.com/fabiancelik/rich-voice-editor/wiki/Implement-more-SSML-Tags).
 
 ## License
 
