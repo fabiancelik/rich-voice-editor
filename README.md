@@ -5,13 +5,7 @@ With this module you can enhance the Quill Rich Text Editor https://quilljs.com/
 
 ![rich-voice-editor-screenshot](docs/rich-voice-editor-screen.png?raw=true)
 
-The following SSML / AWS Polly tags are currently supported:
-
-*   speak - 
-*   break - add a break / pause with 3 different durations
-*   ...
-
-There are also functions to parse formatted text to SSML and also a basic validation.
+The following SSML tags / functions are supported: https://github.com/fabiancelik/rich-voice-editor/wiki/SSML-Tags-and-Functions
 
 Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
