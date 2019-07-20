@@ -1,11 +1,12 @@
 # rich-voice-editor
-Rich Voice Editor: Quill Rich Text Editor Enhancements to support SSML 
+Rich Voice Editor: Quill Rich Text Editor Enhancements to support [SSML](https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html) 
 
 With this module you can enhance the Quill Rich Text Editor https://quilljs.com/ to support SSML tags.
 
 ![rich-voice-editor-screenshot](docs/rich-voice-editor-screen.png?raw=true)
 
 The following SSML tags / functions are supported: [SSML Tags and Functions](https://github.com/fabiancelik/rich-voice-editor/wiki/SSML-Tags-and-Functions)
+The current functionality is optimized for [AWS Polly](https://aws.amazon.com/polly/) with special [Amazon SSML Tags](https://docs.aws.amazon.com/polly/latest/dg/supported-ssml.html)
 
 Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
@@ -121,7 +122,7 @@ npm i
 npm run-script build
 ```
 
-Please see the Wiki to learn more [how to add more SSML Tags](https://github.com/fabiancelik/rich-voice-editor/wiki/Implement-more-SSML-Tags).
+Please see the Wiki to learn more [how to add more SSML Tags](https://github.com/fabiancelik/rich-voice-editor/wiki/Implement-more-SSML-Tags). I would especially appreciate a better [Amazon Alexa](https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html#ssml-supported) support.
 
 ## License
 
