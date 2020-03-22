@@ -13,14 +13,14 @@ The current functionality is optimized for [AWS Polly](https://aws.amazon.com/po
 
 Live Demo: https://fabiancelik.github.io/rich-voice-editor/
 
-Try on jsfiddle: https://jsfiddle.net/fabiancelik/opa6cbj4/5/
+Try on jsfiddle: https://jsfiddle.net/fabiancelik/opa6cbj4/16/
 
 ## Installation
 
-Use the CDN link https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.2.0/dist/richVoiceEditor.min.js
+Use the CDN link https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.4.0/dist/richVoiceEditor.min.js
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.2.0/dist/richVoiceEditor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.4.0/dist/richVoiceEditor.min.js"></script>
 ```
 
 Or use the package manager [npm](https://www.npmjs.com/) to install rich-voice-editor.
@@ -63,7 +63,7 @@ URL to npm package: https://www.npmjs.com/package/quill-rich-voice-editor
 <body>
     <div id="editor" class="center"></div>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.2.0/dist/richVoiceEditor.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.4.0/dist/richVoiceEditor.min.js"></script>
     <script>
         var ssmlToolbarOptions = {
             container: [

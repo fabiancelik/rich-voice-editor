@@ -28,7 +28,7 @@ layout: default
         <div id="editor" class="center" style="height: 200px"></div>
         <button id="ssmlToggleBtn">Toggle SSML Tags</button>
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.2.0/dist/richVoiceEditor.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.4.0/dist/richVoiceEditor.min.js"></script>
         <script>
             var ssmlToolbarOptions = {
                 container: [
@@ -85,7 +85,38 @@ layout: default
                     }
                 });
             });
+
+            // Validate on input
+            let timeout = null;
+            quill.on('text-change', function(delta, oldDelta, source) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        // get text w/o formatting from editor
+                        var editorText = quill.getText(0);
+                        // remove amazon namespace before dom parser
+                        editorText = editorText.replace(/amazon:/g, '');
+                        // basic validation if text starts with <speak>
+                        if (editorText.startsWith("<speak>")) {
+                            // use browser dom parster to validate XML
+                            var oParser = new DOMParser();
+                            var oDOM = oParser.parseFromString(editorText, "application/xml");
+                            // if error found in parsing result
+                            if (oDOM.getElementsByTagName("parsererror").length > 0) {
+                                document.getElementById("editor").classList.add("invaildSSML");
+                            } else {
+                                document.getElementById("editor").classList.remove("invaildSSML");
+                            }
+                        } else {
+                            document.getElementById("editor").classList.add("invaildSSML");
+                        }
+                    }, 1000);
+            });
         </script>
+        <style>
+            .invaildSSML {
+                border: 1px solid red !important;
+            }
+        </style>
     </body>
 </html>
 ```
