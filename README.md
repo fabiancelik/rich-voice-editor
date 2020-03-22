@@ -77,6 +77,7 @@ URL to npm package: https://www.npmjs.com/package/quill-rich-voice-editor
                 [{ 'ssml_date': ['mdy', 'dmy', 'ymd', 'md', 'dm', 'ym', 'my', 'd', 'm', 'y'] }], // Add this.
                 ['ssml_substitute'], // Add this.
                 ['ssml_breaths'], // Add this.
+                ['ssml_phoneme'], // Add this.
                 ['ssml_parse'], // Add this.
                 ['ssml_validate'] // Add this.
             ],
@@ -90,6 +91,7 @@ URL to npm package: https://www.npmjs.com/package/quill-rich-voice-editor
                 'ssml_date': function () { }, // Add this.
                 'ssml_substitute': function () { }, // Add this.
                 'ssml_breaths': function () { }, // Add this.
+                'ssml_phoneme': function () { }, // Add this.
                 'ssml_whispering': function () { }, // Add this.
                 'ssml_parse': function () { }, // Add this.
                 'ssml_validate': function () { }// Add this.

@@ -364,6 +364,29 @@ var RichVoiceEditor = function (_Module) {
         // add tag handler to quill toolbar
         toolbar.addHandler('ssml_breaths', ssml_breaths_handler.bind(_this));
 
+        // SSML phoneme tag
+        // ------------
+        // style toolbar button with icon
+        document.querySelector('.ql-ssml_phoneme').innerHTML = '<i class="font icon" title="Phoneme"></i>';
+        function ssml_phoneme_handler() {
+            // get current selected text as range
+            var range = quill.getSelection();
+            // only if range is currently selected
+            if (range) {
+                // only if it is a range and not a position
+                if (range.length > 0) {
+                    // add tag at the end of the selected range
+                    this.quill.insertText(range.index + range.length, '</phoneme>');
+                    // add tag at the beginning of the selected range
+                    this.quill.insertText(range.index, '<phoneme alphabet="ipa" ph="pɪˈkɑːn">');
+                    // set cursor position to the end of new tag
+                    this.quill.setSelection(range.index + range.length + 46);
+                }
+            }
+        }
+        // add tag handler to quill toolbar
+        toolbar.addHandler('ssml_phoneme', ssml_phoneme_handler.bind(_this));
+
         // SSML parsing function
         // ---------------------
         // style toolbar button with icon

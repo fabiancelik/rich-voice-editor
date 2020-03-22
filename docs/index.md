@@ -26,6 +26,7 @@ layout: default
     </head>
     <body>
         <div id="editor" class="center" style="height: 200px"></div>
+        <button id="ssmlToggleBtn">Toggle SSML Tags</button>
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.2.0/dist/richVoiceEditor.min.js"></script>
         <script>
@@ -41,6 +42,7 @@ layout: default
                     [{ 'ssml_date': ['mdy', 'dmy', 'ymd', 'md', 'dm', 'ym', 'my', 'd', 'm', 'y'] }], // Add this.
                     ['ssml_substitute'], // Add this.
                     ['ssml_breaths'], // Add this.
+                    ['ssml_phoneme'], // Add this.
                     ['ssml_parse'], // Add this.
                     ['ssml_validate'] // Add this.
                 ],
@@ -54,6 +56,7 @@ layout: default
                     'ssml_date': function () { }, // Add this.
                     'ssml_substitute': function () { }, // Add this.
                     'ssml_breaths': function () { }, // Add this.
+                    'ssml_phoneme': function () { }, // Add this.
                     'ssml_whispering': function () { }, // Add this.
                     'ssml_parse': function () { }, // Add this.
                     'ssml_validate': function () { }// Add this.
@@ -69,6 +72,18 @@ layout: default
                     'rich-voice-editor': true // Add this.
                 },
                 placeholder: '<speak>Your text here</speak>'
+            });
+            let ssmlToggle = true;
+            document.getElementById("ssmlToggleBtn").addEventListener("click", () => {
+                ssmlToggle = !ssmlToggle;
+                document.getElementsByClassName('ql-toolbar')[0].remove();
+                var quill = new Quill('#editor', {
+                    theme: 'snow',
+                    modules: {
+                        toolbar: ssmlToggle ? ssmlToolbarOptions : {},
+                        'rich-voice-editor': ssmlToggle
+                    }
+                });
             });
         </script>
     </body>
