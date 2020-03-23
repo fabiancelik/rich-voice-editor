@@ -6,8 +6,11 @@
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     </head>
     <body>
+        <p>SSML Editor</p>
         <div id="editor" class="center" style="height: 200px"></div>
-        <button id="ssmlToggleBtn">Toggle SSML Tags</button>
+        <button id="ssmlToggleBtn">Toggle SSML Menue Bar</button>
+        <p>Preview:</p>
+        <div id="editorPreview" class="center" style="height: 200px"></div>
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/quill-rich-voice-editor@0.4.0/dist/richVoiceEditor.min.js"></script>
         <script>
@@ -74,6 +77,8 @@
                     timeout = setTimeout(() => {
                         // get text w/o formatting from editor
                         var editorText = quill.getText(0);
+                        // trigger preview
+                        transferPreview();
                         // remove amazon namespace before dom parser
                         editorText = editorText.replace(/amazon:/g, '');
                         // basic validation if text starts with <speak>
@@ -92,6 +97,23 @@
                         }
                     }, 1000);
             });
+
+            // Preview Editor Read Only
+            var quillPreview = new Quill('#editorPreview', {
+                theme: 'snow',
+                modules: {
+                    toolbar: false,
+                },
+                placeholder: '<speak>Your text here</speak>'
+            });
+            quillPreview.disable();
+            function transferPreview(){
+                let ssmlDelta = quill.getContents();
+                let ssmlText = JSON.stringify(ssmlDelta);
+                ssmlText = ssmlText.replace(/<[^>]*>/g, '');
+                quillPreview.setContents(JSON.parse(ssmlText));
+            }
+
         </script>
         <style>
             .invaildSSML {
